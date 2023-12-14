@@ -32,9 +32,9 @@ const Hadear = () => {
    <div className='flex flex-col'>
 
    
-        <navbar className={` w-full fixed top-0 left-0 justify-between text-2xl  z-10 ${manuOpen ? "m-0" : ""}`} >
-            <div className={`nav w-full fixeds   flex ${manuOpen ? "flex-col w-screen top-0 min-h-screen bg-transparent h-full " : "justify-between"} `}>
-      <Link href= '/'>  <div className={`leftnav  cursor-pointer ${ manuOpen ? "hidden" : "flex"}`}>
+        <navbar className={` w-full fixed top-0 left-0 justify-between text-2xl  z-10 ${manuOpen ? "" : ""}`} >
+            <div className={`nav w-full fixeds   flex ${manuOpen ? "flex-col w-screen top-0 min-h-screen  h-full " : "justify-between"} ${showEnergy ? "bg-transparent" : "bg-slate-100"}`}>
+      <Link href= '/'>  <div className={`leftnav fixed mt-2 ml-5 cursor-pointer ${ manuOpen ? "hidden" : "flex"}`}>
        Tesla
 
        </div></Link>       
@@ -43,7 +43,7 @@ const Hadear = () => {
             
         
         <div>
-            <ul className= {` md:flex md:z-auto z-[-1] ${ manuOpen ? "flex-col mt-16   ml-2  " : "hidden" } ${showEnergy ? "hidden" : "flex"} `} >
+            <ul className= {` md:flex md:z-auto z-[-1] sm:hidden ${ manuOpen ? "flex-col mt-16   ml-2  " : "hidden" } ${showEnergy ? "hidden" : "flex"} `} >
                 <li className='cursor-pointer hover:bg-slate-100 rounded-lg p-3 ' onMouseEnter={()=> setIsHovering(true)} onMouseLeave={()=> setIsHovering(false)} onClick={()=> setShowEnergy(true)} >Vehicles  </li>
                 <li className='cursor-pointer hover:bg-slate-100 rounded-lg p-3 ' onMouseEnter={()=> setEnergy(true)} onMouseLeave={()=> setEnergy(false)} onClick={()=> setShowEnergy(true)} >Energy  </li>
                 <li className='cursor-pointer hover:bg-slate-100 rounded-lg p-3 ' onMouseEnter={()=> setCharging(true)} onMouseLeave={()=> setCharging(false)} onClick={()=> setShowEnergy(true)}>Charging  </li>
@@ -61,7 +61,7 @@ const Hadear = () => {
            
            </ul>
            </div>
-           <button onClick={() => setManuOpen(true)} className={`md:hidden mt-10 border hover:bg-slate-400 mr-5 ${manuOpen ? "hidden" : "flex"} `} >Manu</button>
+           <button onClick={() => setManuOpen(true)} className={`md:hidden xs:flex mt-2 right-0 absolute border hover:bg-slate-400 mr-5 ${manuOpen ? "hidden" : "flex"} `} >Manu</button>
            <button onClick={() => setShowEnergy(false) & setManuOpen(false)  }    className={`md:hidden p-2 mr-5 right-0 top-5  border hover:bg-slate-400  ${manuOpen ? "absolute z-40 " : "hidden"}  `} >Close</button>
            <button onClick={() => setShowEnergy(false) }    className={`md:hidden p-2 pl-10 left-0 top-5 ml-5  border hover:bg-slate-400   ${showEnergy ? "absolute z-40" : "hidden"}  `} >Back</button>
         </div>
@@ -100,6 +100,7 @@ const Hadear = () => {
         <Discover />
         </div>
         </div>
+
 
 
         <div className="main" onMouseEnter={()=> setShop(true)} onMouseLeave={()=> setShop(false)} >
