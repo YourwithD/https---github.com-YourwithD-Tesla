@@ -8,14 +8,14 @@ import styled from 'styled-components'
 const Section = ({title, Dec, leftbtn, rightbtn, downdec, subdec, downd, backgroundimg,  h1, h2, h3, h4, h5, h6, h7  }) => {
 
   return (
-        <Wrap className=' w-screen min-h-screen overflow-x-hidden ' bgImage ={backgroundimg}>
+        <Wrap className=' w-screen min-h-screen overflow-x-hidden bg-image ' bgImage ={backgroundimg}>
           <ItemText>
             <h1 className='text-4xl'>{title}</h1>
             <p className='text-xl '> {Dec} </p>
             <p> {subdec}</p>
           </ItemText>
           <ButtonGroup>
-            <Button className='md:flex z-1  ' >
+            <Button className='md:flex cursor-pointer ' >
             <LeftButton> {leftbtn}</LeftButton>
             {rightbtn && 
             <RightButton>
@@ -85,7 +85,7 @@ align-item: center;
 
 const LeftButton = styled.div`
 padding: 10px;
-background-color: rgba(23, 26, 32, 0.8);
+background-color: rgba(23, 26, 32, 0.4);
 margin: 10px ;
 
 height: 40px;
@@ -95,7 +95,6 @@ display: flex;
 justify-content: center;
 align-item: center;
 color: black;
-opacity: 0.65;
 font-size: 12px;
 background-color: white;
 font-size: 15px;
@@ -105,7 +104,6 @@ font-size: 15px;
 const RightButton = styled(LeftButton)`
 background-color: black;
 color: white;
-opacity: 0.4;
 
 `
 
