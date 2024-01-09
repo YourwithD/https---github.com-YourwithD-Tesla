@@ -11,7 +11,7 @@ import Discover from '../discover/page';
 import Link from 'next/link';
 import tesla from '../../../public/images/tesla.png'
 import Image from 'next/image';
-import { LuUserCircle } from "react-icons/lu";
+import { FaRegUserCircle  } from "react-icons/fa";
 
 
 
@@ -60,11 +60,11 @@ const Hadear = () => {
             </div>
        
         <div>
-            <ul className= {` md:flex mt-4  pb-12 w-full mr-5 ${manuOpen ? "flex-col" : "hidden"}  ${showEnergy ? "hidden" : "flex"} `}>
+            <ul className= {` md:flex mt-4 text-center justify-center  pb-12 w-full mr-5 ${manuOpen ? "flex-col" : "hidden"}  ${showEnergy ? "hidden" : "flex"} `}>
                 
             <li className='hover:bg-slate-400 hover:rounded p-3   text-3xl cursor-pointer'><span className='md:hidden pl-2 text-xl' >Support</span><span className='hidden md:flex'><IoIosHelpCircleOutline /></span></li>
             <li className='hover:bg-slate-400 hover:rounded p-3   text-3xl cursor-pointer flex'><span><IoIosGlobe /></span><div className='md:hidden flex flex-col text-xl pl-3 ' ><span>United States</span><span className='text-sm'>English</span></div></li>
-            <li className='hover:bg-slate-400 hover:rounded p-3   text-3xl cursor-pointer flex '><span><LuUserCircle /></span><span className='md:hidden text-xl pl-3' >Acount</span></li>
+            <li className='hover:bg-slate-400 hover:rounded p-3  text-[26px] cursor-pointer flex '><span className='pt-[2px]'><FaRegUserCircle /></span><span className='md:hidden text-xl pl-3' >Acount</span></li>
            
            </ul>
            </div>

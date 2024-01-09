@@ -5,10 +5,19 @@ import styled from 'styled-components'
 
 
 
-const Section = ({title, Dec, leftbtn, rightbtn, downdec, subdec, downd, backgroundimg,  h1, h2, h3, h4, h5, h6, h7  }) => {
+const Section = ({title, Dec, leftbtn, rightbtn, downdec, subdec, downd, backgroundimg, backgroundVideo,  h1, h2, h3, h4, h5, h6, h7  }) => {
 
   return (
-        <Wrap className=' w-screen min-h-screen overflow-x-hidden bg-image ' bgImage ={backgroundimg}>
+   
+    <> 
+    { backgroundVideo && 
+          
+          <video autoPlay  muted loop className=" absolute text-white  -z-40 min-h-screen w-screen  object-cover object-center"  >
+            <source src={backgroundVideo} type="video/mp4" />
+            </video>
+            }
+    <Wrap className=' w-screen min-h-screen overflow-x-hidden ' bgImage ={backgroundimg}>
+          
           <ItemText>
             <h1 className='text-4xl'>{title}</h1>
             <p className='text-xl '> {Dec} </p>
@@ -27,7 +36,7 @@ const Section = ({title, Dec, leftbtn, rightbtn, downdec, subdec, downd, backgro
           <h1 className='text-center justify-center '> {downdec}</h1>
           <h2 className='text-center justify-center cursor-pointer '>{downd} </h2>
           <div className="nav mb-1">
-            <ul className='flex justify-center gap-5  '>
+            <ul className='flex justify-center gap-3 text-[10px] '>
               <li className='cursor-pointer hover:underline text-white'>{h1}</li>
               <li className='cursor-pointer hover:underline text-white'>{h2}</li>
               <li className='cursor-pointer hover:underline text-white'>{h3}</li>
@@ -38,14 +47,12 @@ const Section = ({title, Dec, leftbtn, rightbtn, downdec, subdec, downd, backgro
             </ul>
           </div>
           </ButtonGroup>
-
-          
-
-            
-
-          
         </Wrap>
-        
+          
+      </>
+       
+   
+       
   )
 }
 
