@@ -12,6 +12,7 @@ import Link from 'next/link';
 import tesla from '../../../public/images/tesla.png'
 import Image from 'next/image';
 import { FaRegUserCircle  } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 
 
@@ -68,7 +69,7 @@ const Hadear = () => {
            
            </ul>
            </div>
-           <button onClick={() => setManuOpen(true)} className={`md:hidden xs:flex right-0 absolute border mt-8 hover:bg-slate-400 mr-5 ${manuOpen ? "hidden" : "flex"} `} >Manu</button>
+           <button onClick={() => setManuOpen(true)} className={`md:hidden xs:flex right-0   absolute mt-8 hover:bg-slate-400 mr-5 ${manuOpen ? "hidden" : "flex"} `} ><RxHamburgerMenu/></button>
            <button onClick={() => setShowEnergy(false) & setManuOpen(false)  }    className={`md:hidden p-2 mr-5 right-0 top-5   hover:bg-slate-400   ${manuOpen ? "absolute z-40 " : "hidden"}  `} ><IoIosCloseCircleOutline className='text-4xl ' /></button>
            <button onClick={() => setShowEnergy(false) }    className={` sm:hidden p-2 pl-5 left-0 top-5  hover:bg-slate-400   ${showEnergy ? "absolute " : "hidden"}  `} ><IoIosArrowBack className='text-4xl' /></button>
         </div>
